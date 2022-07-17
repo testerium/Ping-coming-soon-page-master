@@ -1,0 +1,255 @@
+@use './variables.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Libre+Franklin:wght@300;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+
+    img {
+        margin: 80px auto 40px auto;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+        h1 {
+            font-family: $Libre;
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 60px;
+            text-align: center;
+            color: $gray;
+
+            span {
+                font-family: $Libre;
+                font-weight: 700;
+                color: $very_dark_blue;
+            }
+        }
+
+        p {
+            font-family: $Libre;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: $very_dark_blue;
+            margin: 16px auto 40px auto;
+        }
+
+        .form {
+            margin-bottom: 94px;
+
+            #email {
+                padding-left: 30px;
+
+                &::placeholder {
+                    color: $pale_blue;
+                }
+            }
+
+            input {
+                width: 421px;
+                height: 56px;
+                background: $white;
+                border: 1px solid $pale_blue;
+                box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
+                border-radius: 28px;
+                margin-right: 16px;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    border: 1px solid $pale_blue;
+                    outline: 1px solid $pale_blue;
+                }
+
+                &.error {
+                    outline: 1px solid $light_red;
+                    border: 0;
+                }
+            }
+
+            button {
+                width: 200px;
+                height: 56px;
+                background: $blue;
+                box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
+                border-radius: 28px;
+                border: none;
+                color: $white;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+
+                &:hover {
+                    cursor: pointer;
+                    mix-blend-mode: normal;
+                    opacity: 0.7;
+                    border-radius: 28px;
+                }
+            }
+        }
+
+        .error_text {
+            display: none;
+            font-family: $Libre;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.15px;
+            color: $light_red;
+            padding: 6px 0 0 30px;
+
+            &.active {
+                display: block !important;
+            }
+        }
+    }
+
+}
+
+.image {
+    margin-bottom: 74px;
+}
+
+
+footer {
+    font-family: $Libre;
+
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        color: $gray;
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            width: 120px;
+            margin-bottom: 24px;
+
+            img {
+                background-color: $white;
+
+                &:hover {
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .attribution {
+        margin-top: 50px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    header {
+        img {
+            margin: 81px auto 32px auto;
+        }
+    }
+
+    main {
+        .text {
+            h1 {
+                font-size: 22px;
+                line-height: 32px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 15px;
+                margin: 15px auto 32px auto;
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 40px;
+
+                #email {
+                    padding-left: 32px;
+                }
+
+                input {
+                    order: 1;
+                    width: 281px;
+                    height: 40px;
+                    margin-right: 0;
+                }
+
+                button {
+                    order: 3;
+                    width: 282px;
+                    height: 40px;
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin-top: 20px;
+                }
+            }
+
+            .error_text {
+                order: 2;
+                text-align: center;
+                font-weight: 300;
+                padding: 2px 0 0 0;
+            }
+        }
+    }
+
+    .image {
+        margin-bottom: 120px;
+
+        img {
+            width: 320px;
+            height: 192px;
+        }
+    }
+
+    footer {
+        font-family: $Libre;
+
+        .copyright {
+            font-size: 10px;
+            line-height: 12px;
+            color: $gray;
+
+            .icons {
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
