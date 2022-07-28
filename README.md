@@ -2,17 +2,21 @@
 
 This is my own solution to the [Ping coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da). Frontend Mentor challenges help improve coding skills by building realistic projects. 
 
-## Table of contents
+### Links
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-- [Author](#author)
+- Live Site URL: [Ping Coming Soon Page](https://testerium-ping-coming-soon-page.netlify.app/)
 
-## Overview
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Built with
+
+- HTML
+- CSS 
+- SCSS
+- Flexbox
+- JavaScript
 
 ## The challenge
 
@@ -25,25 +29,9 @@ Users should be able to:
 	- The `input` field is empty. The message for this error should say *"Whoops! It looks like you forgot to add your email"*
 	- The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Please provide a valid email address"*
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-### Links
-
-- Live Site URL: [Ping Coming Soon Page](https://testerium-ping-coming-soon-page.netlify.app/)
-
 ## My process
 
 I completed the desktop and mobile views in less than 2 hours. The part that took me the most time was the form handling part, which is coded in JavaScript. After a little difficulty, I managed to complete the project successfully. 
-
-### Built with
-
-- HTML
-- CSS 
-- SCSS
-- Flexbox
-- JavaScript
 
 ## Author
 
